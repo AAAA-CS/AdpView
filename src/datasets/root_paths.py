@@ -1,6 +1,5 @@
 DATA_ROOTS = {
-    # 'potsdam': 'data/potsdam/train_RGB',
-    'potsdam': '\viewmaker-main\data\potsdam\train_RGB',
+    'potsdam': 'data/potsdam/train_RGB',
     'vaihingen': 'data/vaihingen_selfsup_256_64',
     'loveDa': 'data/loveDa/loveDA_selfsup',
     'cifar10': 'data/cifar10',
