@@ -1,0 +1,38 @@
+{
+    "exp_base": "new_setting",
+    "exp_name": "pretrain_expert_potsdam_simclr_resnet18",
+    "system": "PretrainExpertSystem",
+    "cuda": true,
+    "distributed_backend": "ddp",
+    "gpu_device": 0,
+    "seed": 0,
+    "data_loader_workers": 8,
+    "data_params": {
+        "dataset": "potsdam",
+        "default_augmentations": "all"
+    },
+    "model_params": {
+        "out_dim": 128,
+        "resnet": true,
+        "resnet_version": "resnet18",
+        "resnet_small": false,
+        "projection_head": true
+    },
+    "loss_params": {
+        "t": 0.1,
+        "name": "simclr"
+    },
+    "optim_params": {
+        "batch_size": 64,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 1e-6,
+        "validate_freq": 1,
+        "patience": 1000,
+        "num_view_update": 1
+    },
+    "num_epochs": 400,
+    "validate": true,
+    "copy_checkpoint_freq": 5,
+    "continue_from_checkpoint": null
+}
