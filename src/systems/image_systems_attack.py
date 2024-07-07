@@ -77,7 +77,6 @@ class PretrainAttackSystem(pl.LightningModule):
         self.attack = CompositeAttack(self.model, enabled_attack=(0, 1, 2, 3, 4), mode='train', dataset='imagenet',
                                        start_num=start_num, iter_num=iter_num, inner_iter_num=inner_iter_num,
                                        multiple_rand_start=True, order_schedule="fixed")
-        print("攻击种类：", 0, 1, 2, 3, 4)
 
     def view(self, imgs):
         if 'Expert' in self.config.system:
